@@ -1,0 +1,124 @@
+{
+  "bikes":[
+    {
+      "title":"Bianchi",
+      "subtitle":"Centenario 1985",
+      "blurb":"This bike Commemorates Bianchi 100 years in business and was displayed at the 1985 Milano Bicycle Expo. Columbus SLX Black nickel finished steel frame with pantographed components and Campagnolo C-Record groupo. The museum has two, both originally sold by Boones. Bianchi 1885- In Milan, Edoardo Bianchi began in 1885 repairing bicycles evolving into building cutting edge bicycles. Using a reparto corse (race Department) Bianchi was racing and proving their expertise by 1896 in races. The Grand Prix of Paris (predecessor to The Tour de France) was won in 1889. The recognition Bianchi was receiving from its Reparto Corse made the company one of the most popular brands in its industry. Bianchi, by 1914, was producing 45,000 bicycles, 1,500 motorcycles, and even 1,000 cars per year. In the 1960s Bianchi stopped production of cars and motorcycles to pursue bicycle manufacturing only.",
+      "image":"bianchi"
+    },
+    {
+      "title":"Churchhill",
+      "subtitle":"circa 1950s",
+      "blurb":"Traditional European design. Sturmey Archer 3 speed, enclosed chain and full fenders",
+      "image":"churchhill"
+    },
+    {
+      "title":"Colson Tandem",
+      "subtitle":"circa 1930s",
+      "blurb":"Rear steer tandem",
+      "image":"colson"
+    },
+    {
+      "title":"Dahon",
+      "subtitle":"Classic III folding bicycle",
+      "blurb":"The Dahon Classic 3 is a steel frame and it is one size fits all. This folding bike has a Sturmey Archer 3 speed hub, front and rear fenders with a rack which came with the Dahon. This folding bike made commuting a whole lot easier.",
+      "image":"dahon"
+    },
+    {
+      "title":"Dayton",
+      "subtitle":"1030's",
+      "blurb":"Classic kid's bike from the era",
+      "image":"dayton"
+    },
+    {
+      "title":"Hop",
+      "subtitle":"circa 1980-1990",
+      "blurb":" Hybrid Origin Phantasy. Made in three sizes, it is an all carbon fiber frame, beautiful carbon bar-stem and carbon bar ends, set up with moderate components and fork. The first model shown to Boones was a proto-type and did not have the chain stay rod. This is a first generation 29er, It was conceived by a fine arts major who went to school in Ohio and returned home to Hong Kong to make carbon sail boards. The era experimenting with 700 C wheels on a mountain bike was just beginning. New, bought from U.S. importer.",
+      "image":"hop"
+    },
+    {
+      "title":"Pierce",
+      "subtitle":"circa 1890",
+      "blurb":"Manufactured by the George N. Pierce Company which was a precursor to the Pierce-Arrow Motor Car Company.",
+      "image":"pierce"
+    },
+    {
+      "title":"Premier American",
+      "subtitle":"circa 1910",
+      "blurb":"Premier Cycle Works, 427 Washington Street. Chicago At the time this bike was made Chicago was overflowing with bicycle manufacturers. Head badge is embossed brass. Aquired from Robert W. Bozarth, Okla.",
+      "image":"premier"
+    },
+    {
+      "title":"Raleigh",
+      "subtitle":"England circa 1904",
+      "blurb":"Three speed Sturmey Archer gears and classic design made this the bike for the masses for many generations and are is still seen world wide. RALEIGH - ENGLAND 1887- In 1887 Frank Bowden purchased a small bike shop on Raleigh Street in Nottingham, England.  A year later he founded the Raleigh Cycle Company. In 1886 the small bike shop was producing at a rate of 150 bikes per year. Forty years later Raleigh was producing 100,000 bicycles annually.  By 1938, bicycle production almost 500,000 every year. WWII suspended bicycle production yet 1949 produced three quarters of a million bicycles. Later years saw the purchase of Moulton (1960-1961), Hercules, Phillips, Sun, Norman, Triumph, BSA and Carlton (1960) Raleigh notably produced popular three-speed bicycles. These were utility bicycles featuring hub gearing provided by Sturmey-Archer. The acquision of Carleton signaled the era of state of the art road bikes. Thanks for this info to Cutter AT Re-Cycle.com",
+      "image":"raleigh"
+    },
+    {
+      "title":"Western Flyer",
+      "subtitle":"none",
+      "blurb":"The Western Flyer was sold by Western Auto stores. They were manufactured by several different companies: Murray, Cleveland, Shelby, Huffman and Huffy. The Western Flyer was first manufactured in the 1030's and was available in various forms until 1959.",
+      "image":"western-flyer"
+    },
+    {
+      "title":"J.C. Higgins",
+      "subtitle":"Circa 1950s",
+      "blurb":" Three speed bike emulating the European bikes became the rage after WWII “John Higgins” the Sears employee 1898-1930 became “JC Higgins” the brand name in 1908. The Schwinn Bicycle Company probably manufactured this bicycle. In 1961 the “Ted Williams” brand replaced it",
+      "image":"higgins"
+    },
+    {
+      "title":"Trialtir",
+      "subtitle":"Circa 1990-92",
+      "blurb":" Using the bars, one could propel themselves, pedal or do both. First marketed via bike shops, then by infomercial. Wildly successful when marketed as a fitness machine. Had prime time, 2am, in the infomercial world, selling 6000 in a 3 month period. Carl Lewis and the gazelle man? were promoters/spokesmen. ",
+      "image":"trialtir"
+    },
+    {
+      "title":"Schwinn Cruiser",
+      "subtitle":"circa 1970s",
+      "blurb":"Schwinn. USA Chicago 1895-2001 Founder Ignaz Schwinn and partner Adolph Arnold dominated the American bicycle sales for many of the early years of the century. Building almost indestructible childrens’ bikes and introducing balloon tires and suspension forks on their cruisers Schwinn captured the recreational rider. ",
+      "image":"schwinn"
+    },
+    {
+      "title":"Cannondale",
+      "subtitle":"first suspension bike SM1000 ",
+      "blurb":"Circa 1984 Sold by Boones in 84. Cannondale 1971 started manufacturing bicycle trailers. panniers and clothing, then in 1983, produced an aluminum frame bicycle with oversized tubes. In 1984 introduced their first mountain bike. Known as an innovating company. ",
+      "image":"cannondale"
+    },
+    {
+      "title":"Speedwell Titanium",
+      "subtitle":"Circa 1970s",
+      "blurb":"First titanium frameset Birmingham, England, 1977 Said to be welded by Lamborghini. Frame set weighed 4lbs at a time other s were over 5.5 lbs. Racers felt the frame was not rigid. Speedwell of England produced 10,000 Titanium frames in 1973 per Bicycle Science 2nd edition by Whitt and Wilson. Another source reports that Speedwell had production Ti frames in the 60's.",
+      "image":"speedwell"
+    },
+    {
+      "title":"Jack Taylor",
+      "subtitle":"Circa 1973",
+      "blurb":"Jack Taylor Cycles 1936-2001 A frame building collaboration between brothers Jack, Norman and Ken Taylor of Stockton-On-Tees, England. Well-known for beautifully clean lugless ('welded', or fillet brazed) construction (a method which rose out of necessity during the war years - lugs simply weren’t available) as well as for lugged frames, and impeccable box and lug striping. A Popular Frame in 1970’s America. Acquired as a donation from a patrons’ friend who was moving. Serial number 6595. ",
+      "image":"jack-taylor"
+    },
+    {
+      "title":"Austro Daimler",
+      "subtitle":"circa 1974",
+      "blurb":" Top of the line model with the prestiges precision Campagnolo components, a full bore racing machine. George Curry a racer - bicycle distributor, (CDI & Gloria) in the 70s, from Dallas raced in Texas seventies races. Acquired from George Curry. Steyr-Daimler-Puch Austria 1864? The company later to become Styer started in 1864 making rifles and by 1915 made auto bicycles etc, forming Styer Daimler Puch. Uniting 3 major manufacturers The Johan Puch company, First Styrian Bicycle Company, manufactured bicycles in 1891 Daimler 1899- & Styer. Steyr-Daimler-Puch In the 1970's Steyr-Daimler-Puch was marketing on several continents under three brand names: Austro-Daimler, Steyr-Daimler-Puch, and Puch. The bicycle frames were all manufactured and assembled in Austria. The Austro-Daimler trademark was reserved the upscale line of bicycles marketed in the English speaking nations. Some were successfully raced by some Olympic and National Team members. The company was founded as Josef und Franz Werndl and Company, a rifle manufacturer, in 1864 and by the1890’s evolved to autos, motorcycles, bicycles, etc manufacturing conglomerate which was sold in 1987 to Piaggio & C.S.P.A. of Italy, a holding company. Prior to then bicycles were not the primary product and Piaggio's F.I.V. Edoardo Bianchi S.p.A manufacturing operation produced Bianchi, Raleigh (formerly of the United Kingdom), and then the Puch bicycles. Austro-Daimler bicycles remained in production until the sale. The name rights to 'Austro-Daimler' were never transferred to Piaggio. The finale for the Steyr Daimler Puch AG conglomerate came about in the 1990's. ",
+      "image":"austro"
+    },
+    {
+      "title":"Kestrel",
+      "subtitle":"ATB 1986",
+      "blurb":"The first carbon mountain bike frame (MX2?). Boones received the first to be delivered to customers. It was defective and was replaced it with this one. Kestrel, 1988-2008 Kestrel is the first in carbon fiber monocque frames. All hand laid in milled molds they had many firsts in the manufacturing of carbon framesets. The first road bike, Kestrel 4000, 1986. Followed with the first carbon mountain bike frame in 1988. Boones received the first to be delivered to customers. It was defective and was replaced it with this one. Its s/n is_____ Kestrel produced several models in limited sizes. And introduced the Talon , made in Asia so they could reach a price point for a carbon frame bicycle under 2500. The American made frames started at that price. The Talon had a unique construction and was a sharp looking fast bike and soon eclipsed the American production. Eventually the American made frames were phased out and the Asian production took over. Kestrel was sold to Fugi in 2008? ",
+      "image":"kestrel"
+    },
+    {
+      "title":"Mercian Tandem",
+      "subtitle":"circa mid-1970's",
+      "blurb":"TA cranks, Mafac brakes and Huret gears were typical on tandems of the time. The rack box did not catch on with riders and is rare to see one in mint condition. Acquired from original owner after his second wife did not want to keep it. Mercian Cycles began as a bicycle shop from 1965 -1971. A larger purpose-built workshop was built on Pontefract Street, off Ascot Drive, in Derby. I had the occasion to visit this factory located in a long, narrow, single story, red brick building. It was fascinating to see the sequence of construction; at the front of the building were the work stations where the tube cutting and filing of lugs were done. The next area was the braising where each worker built a frame; I remember only about 5 or 6 stations. The entire tube and lugged joint were held over a gas burner until all parts were heated to the same color, then the silver solder was held to the joint where it appeared to be sucked into the gap between lug and frame tube. The next area was the painting station. Rows of finished frames hung on the wall waiting for the final striping decal process. The last area was the shipping area, and then, out the back door. Bicycles were leaning on the outside wall, as I was told all the employees rode to work. The craftsmen of Mercian Cycles still hand-build and finish frames today, ”Continuing to use the traditional methods to create frames that are recognized worldwide for the quality of workmanship, accuracy of construction and beautiful long lasting finish”. Records from the 1970’s are available. Models included: Vigorelli, Miss Mercian, King of Mercia, Superlight, Campionissimo, Olympic Classic, Audax.Vincitore; some lugless frames were made.",
+      "image":"mercian"
+    },
+    {
+      "title":"Schwinn Paramount",
+      "subtitle":"circa 1970's",
+      "blurb":" Schwinn’s hand built custom road bike: Reynolds 531 double-butted tubing, Nervex lug sets and bottom bracket shells, Campagnolo derailleur dropouts, and equipped with the best available components. Acquired from a patron friend who was moving. The Paramounts from 1959 -1979 represented the ultimate aspiration of every young American racer and dominated the US professional bike scene. Due to its’ success, this time period is often referred to as the “Era of the Paramont”. By the mid 1960’s Schwinn produced several hundred bikes per year, and at its’ peak in the 1970's, Paramount sales rose to 1,200 units. Paramounts could be special ordered, and by the 1960’s came fully chrome plated and with chromed dropouts and fork tips.The Nervex Professional lug set, a stamped lug with its’ well-known ornate profile, took extra effort to achieve and required considerable work, so by the end of the 1960's Schwinn changed to Prugnat lugs. Due to public demand, however, the company returned to the sculpturally ornate Nervex lug set. Schwinn's Chicago hand build shop closed in 1979.",
+      "image":"paramount"
+    }
+  ]
+}
