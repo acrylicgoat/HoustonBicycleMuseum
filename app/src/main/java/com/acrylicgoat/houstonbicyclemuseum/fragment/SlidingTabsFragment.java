@@ -7,6 +7,7 @@
 package com.acrylicgoat.houstonbicyclemuseum.fragment;
 
 import android.content.res.AssetManager;
+import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -16,13 +17,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.acrylicgoat.houstonbicyclemuseum.beans.Bike;
 import com.acrylicgoat.houstonbicyclemuseum.R;
 import com.acrylicgoat.houstonbicyclemuseum.beans.Bikes;
 import com.acrylicgoat.houstonbicyclemuseum.view.SlidingTabLayout;
+import com.acrylicgoat.houstonbicyclemuseum.view.ZoomableImageView;
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
@@ -90,7 +91,7 @@ public class SlidingTabsFragment extends Fragment
             View view = getActivity().getLayoutInflater().inflate(R.layout.bike_layout, container, false);
             container.addView(view);
             Bike bike = bikesList.get(position);
-            ImageView bikeImage = (ImageView)view.findViewById(R.id.bikeImage);
+            ZoomableImageView bikeImage = (ZoomableImageView)view.findViewById(R.id.bikeImage);
             TextView bikeName = (TextView)view.findViewById(R.id.bikeName);
             TextView blurb = (TextView)view.findViewById(R.id.blurb);
 
@@ -100,6 +101,8 @@ public class SlidingTabsFragment extends Fragment
                 InputStream ims = assetManager.open(bike.getImage() + ".jpg");
 
                 Drawable d = Drawable.createFromStream(ims, null);
+                Bitmap bm = Bitmap.createBitmap(d.getIntrinsicWidth(), d.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
+                bikeImage.setImageBitmap(bm);
 
                 bikeImage.setImageDrawable(d);
             }

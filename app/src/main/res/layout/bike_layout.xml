@@ -8,7 +8,7 @@
                   android:layout_width="match_parent"
                   android:layout_weight="0.5"
                   android:layout_height="0dp">
-        <ImageView
+        <com.acrylicgoat.houstonbicyclemuseum.view.ZoomableImageView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:gravity="center_horizontal"
