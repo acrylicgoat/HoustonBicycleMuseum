@@ -22,7 +22,6 @@ import com.acrylicgoat.houstonbicyclemuseum.R;
 import com.acrylicgoat.houstonbicyclemuseum.adapters.AboutUsRecyclerViewAdapter;
 import com.acrylicgoat.houstonbicyclemuseum.beans.About;
 import com.acrylicgoat.houstonbicyclemuseum.beans.AboutList;
-import com.acrylicgoat.houstonbicyclemuseum.beans.Bikes;
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
