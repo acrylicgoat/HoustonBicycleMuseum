@@ -7,11 +7,13 @@
 package com.acrylicgoat.houstonbicyclemuseum.fragment;
 
 import android.app.Activity;
+import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,12 +21,17 @@ import android.view.ViewGroup;
 import com.acrylicgoat.houstonbicyclemuseum.R;
 import com.acrylicgoat.houstonbicyclemuseum.adapters.AboutUsRecyclerViewAdapter;
 import com.acrylicgoat.houstonbicyclemuseum.beans.About;
+import com.acrylicgoat.houstonbicyclemuseum.beans.AboutList;
+import com.acrylicgoat.houstonbicyclemuseum.beans.Bikes;
+import com.google.gson.Gson;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-/**
- * Created by ed on 1/24/16.
- */
+
 public class AboutUsFragment extends Fragment
 {
     RecyclerView recyclerView;
@@ -53,20 +60,29 @@ public class AboutUsFragment extends Fragment
 
     private ArrayList<About> getContent()
     {
-        ArrayList<About> arl = new ArrayList<>();
-        About a = new About();
-        a.setTitle("Houston Bicycle Museum Location");
-        a.setDetails("&nbsp;&nbsp;&nbsp;1313 Binz St.<br/>&nbsp;&nbsp;&nbsp;Houston, Tx 77054<br/>&nbsp;&nbsp;&nbsp;<a href=\\'https://www.google.com/maps/d/edit?mid=zQw3pXjaT2oI.kbgRFAwXqj0w&usp=sharing\\'>Google Map</a>");
-        arl.add(a);
-        About a2 = new About();
-        a2.setTitle("Hours");
-        //a2.setDetails("Tues - Wed. 10am - 5pm<br/>Thurs - Sat 10am - 7pm<br/>Sun 1pm - 6pm");
-        a2.setDetails("<ul><li>&nbsp;&nbsp;&nbsp;&#8226;<strong> Tues-Wed:</strong> 10am - 5pm</li><br/><li>&nbsp;&nbsp;&nbsp;&#8226;<strong> Thur-Sat:</strong> 10am - 7pm</li><br/><li>&nbsp;&nbsp;&nbsp;&#8226;<strong> Sun:</strong> 1pm - 6pm</li><br/><li>&nbsp;&nbsp;&nbsp;&#8226;<strong> Closed:</strong> Monday</li><br/><li>&nbsp;&nbsp;&nbsp;&#8226;<strong> Free day:</strong> Thurs 3-7pm</li></ul>");
-        arl.add(a2);
-        About a3 = new About();
-        a3.setTitle("Visit Us on the Web");
-        a3.setDetails("&nbsp;&nbsp;&nbsp;<a href=\\'http://www.houstonbicyclemuseum.org/\\'>Museum Web Site</a>");
-        arl.add(a3);
+        AboutList aboutList = readJson();
+        ArrayList<About> arl = aboutList.getAboutList();
         return arl;
+    }
+
+    private AboutList readJson()
+    {
+        AssetManager assets = getActivity().getAssets();
+        AboutList aboutList = new AboutList();
+
+        Gson gson = new Gson();
+
+        try
+        {
+            InputStream is = assets.open("about.json");
+            BufferedReader bf = new BufferedReader(new InputStreamReader(is));
+            aboutList = gson.fromJson(bf,AboutList.class);
+        }
+        catch(IOException ioe)
+        {
+            Log.d("json", "Some problem: " + ioe.toString());
+        }
+
+        return aboutList;
     }
 }

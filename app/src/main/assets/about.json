@@ -1,0 +1,20 @@
+{
+  "aboutList":[
+    {
+      "title":"Museum Mission Statement",
+      "details":"The goal of the Bicycle Museum is to display collections of antique and classic bicycles as well as exhibiting cycle related memorabilia. The Museum will cover the spectrum of cycling by beginning at its infancy in the mid-1850's and chronicling its evolution through to the most sophisticated of today.<br><br>Throughout this journey, the Museum will provide an informative and educational glimpse of how the bicycle and cycling has influenced our transportation, our leisure activities, our culture, our society, our lives - and how, by using the developing technologies of each era, the bicycle has progressed in our ever-changing world.<br><br>The history book of the bicycle is a fascinating story. It is the desire of this Museum to bring the pages of that book to life.<br><br>Come visit our interesting space and revive your memories. "
+    },
+    {
+      "title":"Museum Location",
+      "details":"&nbsp;&nbsp;&nbsp;1313 Binz St.<br/>&nbsp;&nbsp;&nbsp;Houston, Tx 77054<br/>&nbsp;&nbsp;&nbsp;<a href=\\'https://www.google.com/maps/d/edit?mid=zQw3pXjaT2oI.kbgRFAwXqj0w&usp=sharing\\'>Google Map</a>"
+    },
+    {
+      "title":"Museum Hours",
+      "details":"<ul><li>&nbsp;&nbsp;&nbsp;&#8226;<strong> Tues-Wed:</strong> 10am - 5pm</li><br/><li>&nbsp;&nbsp;&nbsp;&#8226;<strong> Thur-Sat:</strong> 10am - 7pm</li><br/><li>&nbsp;&nbsp;&nbsp;&#8226;<strong> Sun:</strong> 1pm - 6pm</li><br/><li>&nbsp;&nbsp;&nbsp;&#8226;<strong> Closed:</strong> Monday</li><br/><li>&nbsp;&nbsp;&nbsp;&#8226;<strong> Free day:</strong> Thurs 3-7pm</li></ul>"
+    },
+    {
+      "title":"Visit Us on the Web",
+      "details":"&nbsp;&nbsp;&nbsp;<a href=\'http://www.houstonbicyclemuseum.org/\'>Museum Web Site</a>"
+    }
+  ]
+}
