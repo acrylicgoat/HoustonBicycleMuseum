@@ -86,12 +86,24 @@ public class AboutUsRecyclerViewAdapter extends RecyclerView.Adapter<AboutUsRecy
             int position = getAdapterPosition();
             //Log.d("onClick()","position: " + position);
 
-            if(position == 0)
+            if(position == 1)
             {
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/maps/d/edit?mid=zQw3pXjaT2oI.kbgRFAwXqj0w&usp=sharing"));
                 v.getContext().startActivity(browserIntent);
             }
-            else if(position == 2)
+            else if(position == 3)
+            {
+                Intent wv = new Intent(v.getContext(), WebviewActivity.class);
+                wv.putExtra("webcontent", "http://www.houstonbicyclemuseum.org");
+                v.getContext().startActivity(wv);
+            }
+            else if(position == 4)
+            {
+                Intent wv = new Intent(v.getContext(), WebviewActivity.class);
+                wv.putExtra("webcontent", "http://www.houstonbicyclemuseum.org/tshirts.php");
+                v.getContext().startActivity(wv);
+            }
+            else if(position == 5)
             {
                 Intent wv = new Intent(v.getContext(), WebviewActivity.class);
                 wv.putExtra("webcontent", "http://www.houstonbicyclemuseum.org");

@@ -15,6 +15,14 @@
     {
       "title":"Visit Us on the Web",
       "details":"&nbsp;&nbsp;&nbsp;<a href=\'http://www.houstonbicyclemuseum.org/\'>Museum Web Site</a>"
+    },
+    {
+      "title":"Support Us",
+      "details":"&nbsp;&nbsp;&nbsp;<a href=\'http://www.houstonbicyclemuseum.org/tshirts.php\''>Buy a t-shirt!</a>"
+    },
+    {
+      "title":"Make A Difference",
+      "details":"&nbsp;&nbsp;&nbsp;<a href=\'https://simplecheckout.authorize.net/payment/CatalogPayment.aspx\''>Select the Donate button!</a>"
     }
   ]
 }
