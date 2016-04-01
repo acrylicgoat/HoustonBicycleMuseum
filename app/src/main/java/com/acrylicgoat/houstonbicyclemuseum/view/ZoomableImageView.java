@@ -33,14 +33,14 @@ public class ZoomableImageView extends ImageView
     PointF start = new PointF();
     float minScale = 1f;
     float maxScale = 4f;
-    float[] m;
+    float[] matrixArray;
 
     float redundantXSpace, redundantYSpace;
     float width, height;
     float saveScale = 1f;
     float right, bottom, origWidth, origHeight, bmWidth, bmHeight;
 
-    ScaleGestureDetector mScaleDetector;
+    ScaleGestureDetector scaleDetector;
     Context context;
 
     public ZoomableImageView(Context context, AttributeSet attr)
@@ -48,9 +48,9 @@ public class ZoomableImageView extends ImageView
         super(context, attr);
         super.setClickable(true);
         this.context = context;
-        mScaleDetector = new ScaleGestureDetector(context, new ScaleListener());
+        scaleDetector = new ScaleGestureDetector(context, new ScaleListener());
         matrix.setTranslate(1f, 1f);
-        m = new float[9];
+        matrixArray = new float[9];
         setImageMatrix(matrix);
         setScaleType(ScaleType.MATRIX);
 
@@ -60,11 +60,11 @@ public class ZoomableImageView extends ImageView
             @Override
             public boolean onTouch(View v, MotionEvent event)
             {
-                mScaleDetector.onTouchEvent(event);
+                scaleDetector.onTouchEvent(event);
 
-                matrix.getValues(m);
-                float x = m[Matrix.MTRANS_X];
-                float y = m[Matrix.MTRANS_Y];
+                matrix.getValues(matrixArray);
+                float x = matrixArray[Matrix.MTRANS_X];
+                float y = matrixArray[Matrix.MTRANS_Y];
                 PointF curr = new PointF(event.getX(), event.getY());
 
                 switch (event.getAction())
@@ -101,9 +101,13 @@ public class ZoomableImageView extends ImageView
                             {
                                 deltaX = 0;
                                 if (y + deltaY > 0)
+                                {
                                     deltaY = -y;
+                                }
                                 else if (y + deltaY < -bottom)
+                                {
                                     deltaY = -(y + bottom);
+                                }
                             }
                             //if scaleHeight is smaller than the views height
                             //in other words if the image height fits in the view
@@ -112,23 +116,35 @@ public class ZoomableImageView extends ImageView
                             {
                                 deltaY = 0;
                                 if (x + deltaX > 0)
+                                {
                                     deltaX = -x;
+                                }
                                 else if (x + deltaX < -right)
+                                {
                                     deltaX = -(x + right);
+                                }
                             }
                             //if the image doesnt fit in the width or height
                             //limit both up and down and left and right
                             else
                             {
                                 if (x + deltaX > 0)
+                                {
                                     deltaX = -x;
+                                }
                                 else if (x + deltaX < -right)
+                                {
                                     deltaX = -(x + right);
+                                }
 
                                 if (y + deltaY > 0)
+                                {
                                     deltaY = -y;
+                                }
                                 else if (y + deltaY < -bottom)
+                                {
                                     deltaY = -(y + bottom);
+                                }
                             }
                             //move the image with the matrix
                             matrix.postTranslate(deltaX, deltaY);
@@ -142,7 +158,9 @@ public class ZoomableImageView extends ImageView
                         int xDiff = (int) Math.abs(curr.x - start.x);
                         int yDiff = (int) Math.abs(curr.y - start.y);
                         if (xDiff < CLICK && yDiff < CLICK)
+                        {
                             performClick();
+                        }
                         break;
                     // second finger is lifted
                     case MotionEvent.ACTION_POINTER_UP:
@@ -183,63 +201,79 @@ public class ZoomableImageView extends ImageView
         @Override
         public boolean onScale(ScaleGestureDetector detector)
         {
-            float mScaleFactor = detector.getScaleFactor();
+            float scaleFactor = detector.getScaleFactor();
             float origScale = saveScale;
-            saveScale *= mScaleFactor;
+            saveScale *= scaleFactor;
             if (saveScale > maxScale)
             {
                 saveScale = maxScale;
-                mScaleFactor = maxScale / origScale;
+                scaleFactor = maxScale / origScale;
             }
             else if (saveScale < minScale)
             {
                 saveScale = minScale;
-                mScaleFactor = minScale / origScale;
+                scaleFactor = minScale / origScale;
             }
             right = width * saveScale - width - (2 * redundantXSpace * saveScale);
             bottom = height * saveScale - height - (2 * redundantYSpace * saveScale);
             if (origWidth * saveScale <= width || origHeight * saveScale <= height)
             {
-                matrix.postScale(mScaleFactor, mScaleFactor, width / 2, height / 2);
-                if (mScaleFactor < 1)
+                matrix.postScale(scaleFactor, scaleFactor, width / 2, height / 2);
+                if (scaleFactor < 1)
                 {
-                    matrix.getValues(m);
-                    float x = m[Matrix.MTRANS_X];
-                    float y = m[Matrix.MTRANS_Y];
-                    if (mScaleFactor < 1)
+                    matrix.getValues(matrixArray);
+                    float x = matrixArray[Matrix.MTRANS_X];
+                    float y = matrixArray[Matrix.MTRANS_Y];
+                    if (scaleFactor < 1)
                     {
                         if (Math.round(origWidth * saveScale) < width)
                         {
                             if (y < -bottom)
+                            {
                                 matrix.postTranslate(0, -(y + bottom));
+                            }
                             else if (y > 0)
+                            {
                                 matrix.postTranslate(0, -y);
+                            }
                         }
                         else
                         {
                             if (x < -right)
+                            {
                                 matrix.postTranslate(-(x + right), 0);
+                            }
                             else if (x > 0)
+                            {
                                 matrix.postTranslate(-x, 0);
+                            }
                         }
                     }
                 }
             }
             else
             {
-                matrix.postScale(mScaleFactor, mScaleFactor, detector.getFocusX(), detector.getFocusY());
-                matrix.getValues(m);
-                float x = m[Matrix.MTRANS_X];
-                float y = m[Matrix.MTRANS_Y];
-                if (mScaleFactor < 1) {
+                matrix.postScale(scaleFactor, scaleFactor, detector.getFocusX(), detector.getFocusY());
+                matrix.getValues(matrixArray);
+                float x = matrixArray[Matrix.MTRANS_X];
+                float y = matrixArray[Matrix.MTRANS_Y];
+                if (scaleFactor < 1) {
                     if (x < -right)
+                    {
                         matrix.postTranslate(-(x + right), 0);
+                    }
                     else if (x > 0)
+                    {
                         matrix.postTranslate(-x, 0);
+                    }
                     if (y < -bottom)
+                    {
                         matrix.postTranslate(0, -(y + bottom));
+                    }
                     else if (y > 0)
+                    {
                         matrix.postTranslate(0, -y);
+                    }
                 }
             }
             return true;

@@ -10,6 +10,11 @@
                   android:cacheColorHint="#00000000">
 
 
+        <ImageView
+            android:id="@+id/logoView"
+            android:layout_width="48sp"
+            android:layout_height="48sp"
+            android:padding="5dp"/>
         <TextView
             android:id="@+id/title"
             style="@style/TextAppearance.Title"
@@ -18,6 +23,7 @@
             android:layout_marginBottom="3dip"
             android:layout_marginTop="3dip"
             android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/logoView"
             android:layout_weight="1"
             android:layout_gravity="left|center_vertical"
             android:textSize="20sp"
@@ -31,6 +37,7 @@
             android:layout_marginTop="3dip"
             android:autoLink="web"
             android:layout_below="@+id/title"
+            android:layout_toRightOf="@+id/logoView"
             android:layout_weight="1"
             android:layout_gravity="left|center_vertical"
             android:textSize="16sp"

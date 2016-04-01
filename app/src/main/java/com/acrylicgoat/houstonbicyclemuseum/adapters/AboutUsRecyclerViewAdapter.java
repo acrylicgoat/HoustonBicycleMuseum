@@ -16,6 +16,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.acrylicgoat.houstonbicyclemuseum.R;
@@ -49,9 +50,34 @@ public class AboutUsRecyclerViewAdapter extends RecyclerView.Adapter<AboutUsRecy
     public void onBindViewHolder(ViewHolder viewHolder, int i)
     {
         About about = contentList.get(i);
-        //Log.d("rv","title: " + about.getTitle() + " details: "+ about.getDetails());
+        Log.d("rv","title: " + about.getTitle() + " details: "+ about.getDetails() + " logo: "+ about.getLogo());
         viewHolder.title.setText(about.getTitle());
         viewHolder.details.setText(Html.fromHtml(about.getDetails()));
+        String logo = about.getLogo();
+        if(logo.equals("ic_account_balance_black_24dp"))
+        {
+            viewHolder.logo.setImageResource(R.drawable.ic_account_balance_black_24dp);
+        }
+        else if(logo.equals("ic_access_time_black_24dp"))
+        {
+            viewHolder.logo.setImageResource(R.drawable.ic_access_time_black_24dp);
+        }
+        else if(logo.equals("ic_language_black_24dp"))
+        {
+            viewHolder.logo.setImageResource(R.drawable.ic_language_black_24dp);
+        }
+        else if(logo.equals("ic_check_circle_black_24dp"))
+        {
+            viewHolder.logo.setImageResource(R.drawable.ic_check_circle_black_24dp);
+        }
+        else if(logo.equals("ic_mood_black_24dp"))
+        {
+            viewHolder.logo.setImageResource(R.drawable.ic_mood_black_24dp);
+        }
+        else if(logo.equals("ic_mail_outline_black_24dp"))
+        {
+            viewHolder.logo.setImageResource(R.drawable.ic_mail_outline_black_24dp);
+        }
         Linkify.addLinks(viewHolder.details, Linkify.WEB_URLS);
 
     }
@@ -67,6 +93,7 @@ public class AboutUsRecyclerViewAdapter extends RecyclerView.Adapter<AboutUsRecy
     {
         private TextView title;
         private TextView details;
+        private ImageView logo;
         ArrayList<About> contentList;
 
         public ViewHolder(View itemView, ArrayList<About> contentList)
@@ -76,6 +103,7 @@ public class AboutUsRecyclerViewAdapter extends RecyclerView.Adapter<AboutUsRecy
 
             title = (TextView) itemView.findViewById(R.id.title);
             details = (TextView)itemView.findViewById(R.id.details);
+            logo = (ImageView) itemView.findViewById(R.id.logoView);
             itemView.setOnClickListener(this);
 
         }
@@ -107,6 +135,12 @@ public class AboutUsRecyclerViewAdapter extends RecyclerView.Adapter<AboutUsRecy
             {
                 Intent wv = new Intent(v.getContext(), WebviewActivity.class);
                 wv.putExtra("webcontent", "http://www.houstonbicyclemuseum.org");
+                v.getContext().startActivity(wv);
+            }
+            else if(position == 6)
+            {
+                Intent wv = new Intent(v.getContext(), WebviewActivity.class);
+                wv.putExtra("webcontent", "https://docs.google.com/forms/d/1ZdbpVznu0o-_Wup5NznbWj2Re5oudoXqcB6kTZBk8yg/viewform");
                 v.getContext().startActivity(wv);
             }
             else

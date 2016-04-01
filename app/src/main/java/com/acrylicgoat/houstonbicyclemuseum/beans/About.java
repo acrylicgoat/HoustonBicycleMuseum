@@ -10,6 +10,17 @@ public class About
 {
     private String title;
     private String details;
+    private String logo;
+
+    public String getLogo()
+    {
+        return logo;
+    }
+
+    public void setLogo(String logo)
+    {
+        this.logo = logo;
+    }
 
     public String getTitle()
     {
