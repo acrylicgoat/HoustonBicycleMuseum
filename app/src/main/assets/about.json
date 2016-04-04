@@ -12,28 +12,13 @@
     },
     {
       "title":"Museum Hours",
-      "details":"<ul><li>&nbsp;&nbsp;&nbsp;&#8226;<strong> Tues-Wed:</strong> 10am - 5pm</li><br/><li>&nbsp;&nbsp;&nbsp;&#8226;<strong> Thur-Sat:</strong> 10am - 7pm</li><br/><li>&nbsp;&nbsp;&nbsp;&#8226;<strong> Sun:</strong> 1pm - 6pm</li><br/><li>&nbsp;&nbsp;&nbsp;&#8226;<strong> Closed:</strong> Monday</li><br/><li>&nbsp;&nbsp;&nbsp;&#8226;<strong> Free day:</strong> Thurs 3-7pm</li></ul>",
+      "details":"<ul><li>&nbsp;&nbsp;&nbsp;&#8226;<strong> Tues-Wed:</strong> 10am - 5pm</li><br/><li>&nbsp;&nbsp;&nbsp;&#8226;<strong> Thur-Sat:</strong> 10am - 6pm</li><br/><li>&nbsp;&nbsp;&nbsp;&#8226;<strong> Sun:</strong> 1pm - 6pm</li><br/><li>&nbsp;&nbsp;&nbsp;&#8226;<strong> Closed:</strong> Monday</li><br/><li>&nbsp;&nbsp;&nbsp;&#8226;<strong> Free day:</strong> Thurs 3-7pm</li></ul>",
       "logo":"ic_access_time_black_24dp"
     },
     {
       "title":"Visit Us on the Web",
       "details":"&nbsp;&nbsp;&nbsp;<a href=\'http://www.houstonbicyclemuseum.org/\'>Museum Web Site</a>",
       "logo":"ic_language_black_24dp"
-    },
-    {
-      "title":"Support Us",
-      "details":"&nbsp;&nbsp;&nbsp;<a href=\'http://www.houstonbicyclemuseum.org/tshirts.php\''>Buy a t-shirt!</a>",
-      "logo":"ic_check_circle_black_24dp"
-    },
-    {
-      "title":"Make A Difference",
-      "details":"&nbsp;&nbsp;&nbsp;<a href=\'https://simplecheckout.authorize.net/payment/CatalogPayment.aspx\''>Select the Donate button!</a>",
-      "logo":"ic_mood_black_24dp"
-    },
-    {
-      "title":"Get our Newsletter",
-      "details":"&nbsp;&nbsp;&nbsp;<a href=\'https://docs.google.com/forms/d/1ZdbpVznu0o-_Wup5NznbWj2Re5oudoXqcB6kTZBk8yg/viewform\''>Tell us about yourself!</a>",
-      "logo":"ic_mail_outline_black_24dp"
     }
   ]
 }

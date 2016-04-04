@@ -121,27 +121,11 @@ public class AboutUsRecyclerViewAdapter extends RecyclerView.Adapter<AboutUsRecy
             }
             else if(position == 3)
             {
-                Intent wv = new Intent(v.getContext(), WebviewActivity.class);
-                wv.putExtra("webcontent", "http://www.houstonbicyclemuseum.org");
-                v.getContext().startActivity(wv);
-            }
-            else if(position == 4)
-            {
-                Intent wv = new Intent(v.getContext(), WebviewActivity.class);
-                wv.putExtra("webcontent", "http://www.houstonbicyclemuseum.org/tshirts.php");
-                v.getContext().startActivity(wv);
-            }
-            else if(position == 5)
-            {
-                Intent wv = new Intent(v.getContext(), WebviewActivity.class);
-                wv.putExtra("webcontent", "http://www.houstonbicyclemuseum.org");
-                v.getContext().startActivity(wv);
-            }
-            else if(position == 6)
-            {
-                Intent wv = new Intent(v.getContext(), WebviewActivity.class);
-                wv.putExtra("webcontent", "https://docs.google.com/forms/d/1ZdbpVznu0o-_Wup5NznbWj2Re5oudoXqcB6kTZBk8yg/viewform");
-                v.getContext().startActivity(wv);
+                //Intent wv = new Intent(v.getContext(), WebviewActivity.class);
+                //wv.putExtra("webcontent", "http://www.houstonbicyclemuseum.org");
+                //v.getContext().startActivity(wv);
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.houstonbicyclemuseum.org"));
+                v.getContext().startActivity(browserIntent);
             }
             else
             {
