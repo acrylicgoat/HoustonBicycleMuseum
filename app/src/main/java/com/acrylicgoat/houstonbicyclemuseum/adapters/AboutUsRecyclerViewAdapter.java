@@ -20,7 +20,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.acrylicgoat.houstonbicyclemuseum.R;
-import com.acrylicgoat.houstonbicyclemuseum.activity.WebviewActivity;
 import com.acrylicgoat.houstonbicyclemuseum.beans.About;
 
 import java.util.ArrayList;
@@ -50,7 +49,7 @@ public class AboutUsRecyclerViewAdapter extends RecyclerView.Adapter<AboutUsRecy
     public void onBindViewHolder(ViewHolder viewHolder, int i)
     {
         About about = contentList.get(i);
-        Log.d("rv","title: " + about.getTitle() + " details: "+ about.getDetails() + " logo: "+ about.getLogo());
+        //Log.d("rv","title: " + about.getTitle() + " details: "+ about.getDetails() + " logo: "+ about.getLogo());
         viewHolder.title.setText(about.getTitle());
         viewHolder.details.setText(Html.fromHtml(about.getDetails()));
         String logo = about.getLogo();
@@ -121,9 +120,6 @@ public class AboutUsRecyclerViewAdapter extends RecyclerView.Adapter<AboutUsRecy
             }
             else if(position == 3)
             {
-                //Intent wv = new Intent(v.getContext(), WebviewActivity.class);
-                //wv.putExtra("webcontent", "http://www.houstonbicyclemuseum.org");
-                //v.getContext().startActivity(wv);
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.houstonbicyclemuseum.org"));
                 v.getContext().startActivity(browserIntent);
             }
